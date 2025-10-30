@@ -1,35 +1,23 @@
-var applePrice = 200;
-var bananaPrice = 300;
+/*  1 */
+var applPrice =  400;
+var mangoPrice =  200;
 
-// console.log(applePrice);
-// console.log(typeof bananaPrice);
+console.log ( applPrice + mangoPrice)
 
-console.log(applePrice + bananaPrice);
-// console.log(orangPrice);
+/* 2  */
+// var  bananaPrice = '40 ';          /* jehatu akhane '' cotetion er mordha doya hoye se tai number ta string hoye gese parseint  diye string kore nite hoy   */
+var  bananaPrice = parseInt('40 ');
+console.log(typeof bananaPrice)
 
-// note : jodi kono Number ke ' ' er mordha rakhi seta string hoye jay 
+console.log(mangoPrice + bananaPrice)
 
-var orangPrice = '400';
+/*  3 */
+var taka = parseFloat('22.5')   /* jehatu akhane '' cotetion er mordha doya hoye se tai number ta string hoye gese float number tai parsefloat  diye string kore nite hoy   */
+console.log( mangoPrice + taka )
 
-console.log(mangoPrice);
-console.log(typeof orangPrice);
-// console.log(mangoPrice);
-
-// note : jodi kono Number ke ' ' er mordha rakhi seta string hoye jay . nicher moto likle  er string thakbe na
-var orangPrice = parseInt ('400');
-var mangoPrice = parseFloat (4.5);
-console.log(typeof orangPrice)
-
-// note: parseFloat and parseInt er dhara  kono Number ke  intijer Number and float number a convert kora jay 
-// exmple:
-var age = parseInt ('20.6') ;
-var taka = parseFloat ('500');
-console.log(age);
-console.log(taka);
-
-// some problems?
-var fistNumber = 0.6;
-var secondNumber = 0.3;
-var total = fistNumber+ secondNumber;
-console.log(total)
-console.log(total.toFixed(2))
+/* Advance tipes  */
+var theJango = 0.1;
+var thePanda = 0.2 ;
+var total = theJango +thePanda;
+ console.log(total )
+ console.log(total .toFixed(4))
