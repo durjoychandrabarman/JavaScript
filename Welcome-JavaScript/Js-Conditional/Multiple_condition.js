@@ -33,7 +33,7 @@ const govermentJob = true;
 
 
 
-// more and more condition 
+// complex conditions
 
 
 if ( (salary >= 30000 && govermentJob == true) || isBCS == true ){
