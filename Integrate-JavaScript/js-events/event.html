@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple event handler</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="page-title">Simple event handler</h1>
+    </header>
+    <main>
+        <section>
+            <button id="change-page-title">Change the page title</button>
+        </section>
+        <section>
+            <p id="user-info">NO user login</p>
+            <button id="login-btn">login</button>
+        </section>
+        <section>
+            <p id="no-name">No name set Your name</p>
+            <input id="input-box" placeholder="Set Your name" type="text">
+            <button id="update-btn">Update Btn</button>
+        </section>
+    </main>
+    <script>
+        document.getElementById('update-btn')
+            .addEventListener('click', function () {
+                const inputBox = document.getElementById('input-box');
+                const name = inputBox.value;
+                const noName = document.getElementById('no-name');
+                noName.innerText = name;
+            })
+    </script>
+    <script src="js-file/event.js"></script>
+</body>
+
+</html>

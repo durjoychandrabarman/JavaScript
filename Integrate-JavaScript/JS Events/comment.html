@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Comment box</title>
+    <style>
+        .comment{
+            border: 4px solid blue;
+            background-color: lightcyan;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Awesome comment box Hare</h1>
+        <section id="comment-container">
+            <div>
+                <h2>Looks the Comment</h2>
+                <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolor a! Odit, quibusdam quam est dolorum repellendus voluptas voluptate quod tempora quo, amet deleniti! Quo labore aperiam necessitatibus culpa, earum minima aspernatur non recusandae architecto quos. Voluptatum, ratione enim reprehenderit laudantium id vero explicabo, fugit earum, consequuntur aut ipsa similique.</p>
+                <p class="comment">Repellat exercitationem illum, et expedita eum quaerat totam veniam aliquid fuga maiores natus alias. Quos in ab mollitia inventore, adipisci officiis voluptates non vel facere. Reprehenderit voluptate distinctio veniam ab omnis placeat laudantium dolorum minima, labore quidem? Voluptatem deleniti, fuga, doloribus quibusdam quasi doloremque at atque nisi eos odit qui.</p>
+                <p class="comment">Similique autem voluptatum labore ipsum consequatur, harum ullam neque laboriosam quam distinctio repudiandae nobis quia sunt voluptates in facere nemo iste. Doloribus quibusdam ut similique, accusamus, praesentium odio commodi et dolore fuga cum deleniti maiores exercitationem, facilis porro minima. Ducimus fugit tempora quasi recusandae quo fugiat consectetur harum alias maiores?</p>
+            </div>
+        </section>
+        <section>
+            <div>
+            <!-- <form action=""> -->
+                <textarea name="" id="text-box" cols="60" rows="10"></textarea> <br><br>
+                <button id="btn-post-comment">Post Comment</button>
+            <!-- </form> -->
+        </div>
+        </section>
+    </main>
+
+    <script>
+        // step :1 prothome event handaler er mardhome  buton ta ke  niye aso
+        document.getElementById('btn-post-comment')
+        .addEventListener('click', function (){
+            // console.log('added the comment')
+
+            // step 2  comment text area thake jai jinis ta lekha ace seta niye asbo
+            const commentBox = document.getElementById('text-box')
+            const newCommentBox = commentBox.value;
+            // console.log(newCommentBox)
+
+            // comment ta kothy set korbo  seta set korbo
+            const commmentContainer = document.getElementById('comment-container')
+            // commmentContainer.innerText = newCommentBox;
+            
+            // step 4 create a p off Comment container 
+            const createElement = document.createElement('p')
+            createElement.innerText = newCommentBox;
+            createElement.classList.add('comment')
+
+            // step 5 appent the new p tag to the preant node
+            commmentContainer.appendChild(createElement)
+
+            // stet 6  clear the text  from the text box
+            commentBox.value = '';
+           
+        })
+    </script>
+</body>
+</html>

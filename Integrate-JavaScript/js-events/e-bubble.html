@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event bubble</title>
+    <style>
+        body {
+            border: 2px solid red;
+            margin: 5px;
+        }
+
+        section {
+            border: 2px solid green;
+            margin: 5px;
+        }
+
+        ol {
+            border: 2px solid purple;
+            margin: 5px;
+        }
+
+        li {
+            border: 2px solid blue;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body id="body-container">
+    <h1>Explore Event bubble </h1>
+    <section id="container">
+        <h2>List of thinks</h2>
+        <ol id="item-box-container">
+            <li id="item-box1">Lorem, ipsum.</li>
+            <li id="item-box2">Kolkata night riders</li>
+            <li id="item-box3">Munbai indians</li>
+            <li id="item-box4">sunrais hydrabad</li>
+            <li id="item-box5">Royelchangers bangluru</li>
+        </ol>
+    </section>
+    <script>
+        // 📌item-box2 event handler
+        document.getElementById('item-box2')
+            .addEventListener('click', function (){
+                console.log('item-box2 clicked')
+            })
+
+        // 📌ol event handler
+        document.getElementById('item-box-container')
+            .addEventListener('click', function (){
+                console.log('ol Item box clicked')
+            })
+        // 📌secton event handler
+        document.getElementById('container')
+            .addEventListener('click', function (){
+                console.log(' section container clicked')
+            })
+        // 📌body event handler
+        document.getElementById('body-container')
+            .addEventListener('click', function (){
+                console.log(' body container clicked')
+            })
+    </script>
+</body>
+
+</html>

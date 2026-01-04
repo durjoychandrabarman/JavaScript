@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box</title>
+    <style>
+        #section-1 {
+            text-align: center;
+            border: 5px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            padding: 10px;
+            box-shadow: inset;
+        }
+
+        .comment {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #111827;
+
+            /* border: 5px; */
+            border-radius: 10px;
+            /* background-color: antiquewhite; */
+            padding: 20px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            /* text-align: center; */
+            /* padding: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="section-1">
+            <h1>Lionel Messi GOAT Tour India 2025</h1>
+            <ul>
+                <li>1. kolkata 13 Dec 2025</li>
+                <li>2. Hyderabad 13 Dec 2025</li>
+                <li>3. Mumbai 14 Dec 2025</li>
+                <li>4. Mew Delhi 15 Dec 2025</li>
+                <li>5. Jamnagar(vantara) hosted by Anant Ambani 16 Dec 2025</li>
+            </ul>
+        </section>
+        <section id="comment-container">
+            <h3>All comment hare</h3>
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officia ipsum
+                praesentium perferendis porro at similique, dolore amet cumque sed!</p>
+            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium officiis molestiae
+                veniam cumque doloribus rerum magnam quam exercitationem, minima explicabo.</p>
+            <p class="comment">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, recusandae maxime hic
+                excepturi unde voluptatibus illum nobis magnam ab a?</p>
+        </section>
+        <textarea name="" id="text-box" cols="60" rows="10"></textarea>
+        <button id="btn-post-comment">Post Comment</button>
+    </main>
+    <script>
+        document.getElementById('btn-post-comment')
+            .addEventListener('click', function (){
+                const textBox = document.getElementById('text-box');
+                
+                const newName = textBox.value;
+                
+
+                const createElement = document.createElement('p');
+                createElement.innerText = newName;
+                createElement.classList.add('comment')
+
+                const commenContainer = document.getElementById('comment-container');
+                commenContainer.appendChild(createElement)
+
+                textBox.value = '';
+
+
+
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Events</title>
+    <!-- <style>
+        .li {
+            color: orange;
+        }
+    </style> -->
+    
+</head>
+<body>
+    <h1>Java script events </h1>
+    <section>
+        <!-- option 1 for event handlar -->
+        <button onclick="console.log('7')">clike me Place</button>
+        <button onclick="console.log('10')">click anader</button>
+        <button onclick="console.log('bar bar click koro')">btn</button>
+    </section>
+    <br>
+    <section>
+        <button onclick="halkaBlue()">halka blue</button>
+        <button onclick="halkaYelow()">halka Yellow</button>
+        
+    </section>
+    <section>
+        <button id="btn-make-red">Make Blue </button>
+    </section>
+
+    <div>
+            <button id="make-orange">Make Orange</button>
+    </div>
+    <br>
+    <div>
+         <button id="make-green">make green</button>
+    </div>
+    <br>
+    <div>
+        <button id="make-gold"> make gold</button>
+    </div>
+    <script>
+        // Option 5 : Document.getElementById().addEventListener()
+        document.getElementById('make-green').addEventListener('click',
+        function makeGren(){
+            document.body.style.backgroundColor = 'green'
+        })
+
+        // anathe option 
+        document.getElementById('make-gold').addEventListener('click',
+            function (){
+                document.body.style.textAlign ='center'
+            }
+        )
+    </script>
+    <script src="event.js"></script>
+    
+</body>
+</html>

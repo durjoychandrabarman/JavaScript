@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More addEventListener</title>
+</head>
+
+<body>
+    <section>
+        <button id="btn-mouse">Mouse Events koro</button>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section>
+        <input id="your-name" placeholder="Your Name" type="text">
+        <input id="your-email" placeholder="Your email" type="text">
+    </section>
+    <script>
+        // document.getElementById('btn-mouse')
+        //     .addEventListener('mouseenter', function () { 
+        //         console.log('mouse event choltece')
+        //     })
+
+        // document.getElementById('btn-mouse')
+        //     .addEventListener('mousemove', function () { 
+        //         console.log('mouse event choltece')
+        //     })
+
+        // document.getElementById('btn-mouse')
+        //     .addEventListener('mouseout', function () { 
+        //         console.log('mouse event choltece')
+        //     })
+
+        // document.getElementById('your-name').addEventListener('focus',function(){
+        //     console.log('User Name liktece')
+        // })
+
+        // document.getElementById('your-email').addEventListener('focus',function(){
+        //     console.log('User email liktece')
+        // })
+
+        // document.getElementById('your-name').addEventListener('blur',function(){
+        //     console.log('User Name done')
+        // })
+
+        // document.getElementById('your-email').addEventListener('blur',function(){
+        //     console.log('User email done')
+        // })
+
+
+        // document.getElementById('your-name').addEventListener('keydown', function (event) {
+        //     console.log('typing choltece',event.target.value)
+        // })
+        document.getElementById('your-name').addEventListener('keyup', function (event) {
+            console.log('typing choltece',event.target.value)
+        })
+    </script>
+</body>
+
+</html>

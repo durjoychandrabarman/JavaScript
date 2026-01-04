@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <style>
+        .Fruits-container li{
+            color: cornflowerblue;
+        }
+        #Fruits-item {
+            color: black;
+        }
+        #my-favPlaces{
+            color: orange;
+            /* backgroundColor: ; */
+            /* textAlign: ; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="wlc" class="some-class" class="big" class="nmai"> Welcome to my Dom</h1>
+    </header>
+    <main id="main-container">
+        <h1>My first expariance with Dom</h1>
+        <!-- <h1>tui janais ami ke re bata ami loge aci Dot com er md </h1> -->
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quod tempora quidem magni accusamus! Sapiente reiciendis quidem cupiditate facere voluptatibus odit et excepturi quos architecto odio sequi accusantium culpa pariatur provident eveniet, minus eum voluptas. Eius eos perferendis asperiores cum porro maxime iure sunt quia non corporis. Maxime, culpa possimus.</p>
+        
+       <section>
+             <ul>
+            <li>My First time Javascript code </li>
+            <li>This is a blog</li>
+            <li>The blog is a Dom</li>
+            <li>Loge aci dot com </li>
+        </ul>
+       </section>
+
+       <section class="Fruits-container">
+            <h1 id="Fruits-item">My Fruits Item </h1>
+            <ul>
+                <li>Apple</li>
+                <li>Mango </li>
+                <li>Banana</li>
+                <li>orange</li>
+                <li>Painapple</li>
+            </ul>
+       </section>
+
+       <section>
+            <h1 id="my-favPlaces">MY Fav Country in World</h1>
+            <ul >
+                <li class="important-places">BanglaDesh </li>
+                <li class="important-places">India</li>
+                <li class="important-places">Amarika</li>
+                <li class="anather-Places">Hululu</li>
+            </ul>
+       </section>
+
+       <section class="list-item">
+            <h1 id="student">My student list </h1>
+        <ul>
+            <li>Durjoy Chandra barman</li>
+            <li>Himel</li>
+            <li>bijoy</li>
+            <li>Pronoy</li>
+        </ul>
+       </section>
+
+       <section id="bangla-jatiyoSong" class="list-item2 larges-text">
+        <ul>
+            <li>amer soner bangla</li>
+            <li>ami tomay valobashi</li>
+            <li>chirodin tomer akesh</li>
+            <li>chairo din tomer batash</li>
+        </ul>
+       </section>
+
+
+
+       <section id="sports-man">
+            <ul id="sports-man-list">
+                    <li>Messi the great sports Man</li>
+                    <li>Neymer is an Bazilian footbollar</li>
+                    <li>Virat kohili is an cricketr</li>
+                    <li>rohit is an captan of team India</li>
+                    <li>litton Das is an BanglaDeshi cricketer</li>
+            </ul>
+
+       </section>
+    </main>
+
+    <script src="JavaScript/java.js"></script>
+    <script src="JavaScript/append.js"></script>
+    <script src="JavaScript/styleJs.js"></script>
+    <script>
+        // const licollection = document.getElementsByTagName('li')
+        // for (const li of licollection){
+        //     console.log(li.innerText)
+        // }
+
+        // const headding = document.getElementsByTagName('h1')
+        // for (const h1 of headding){
+        //     console.log(h1.innerText)
+        // }
+        // console.log(licollection)
+    
+        const myPlaces = document.getElementsByClassName('important-places') 
+        for (const place of myPlaces){
+            // console.log(place.innerText)
+        }
+
+        const someLi = document.querySelectorAll('.Fruits-container li ');
+        // console.log(someLi)
+        for (const li of someLi){
+            // console.log(li.innerText)
+        }
+
+        const listec  = document.getElementsByClassName('list-item') 
+        for (const lis of listec){
+            // console.log(lis.innerText)
+        }
+        const students = document.getElementById('student')
+        // console.log(students)
+    
+    </script>
+    
+</body>
+</html>

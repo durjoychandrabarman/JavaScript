@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main container</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800">
+    <main class="max-w-md min-h-screen mx-auto py-6 bg-gray-100">
+        <header>
+            <nav class="flex justify-around items-center">
+                <div class="flex justify-around gap-2 items-center ">
+                    <div><img class="w-12" src="img/Group.png" alt=""></div>
+                    <div>
+                        <h1 class="text-3xl font-bold">$ <span id="main-balance"> 45000</span></h1>
+                        <p class="border rounded p-1">Available Balance</p>
+                    </div>
+                </div>
+                <button class="btn">Log Out</button>
+            </nav>
+<!-- ------------------ card box section ----------------------------------- -->
+            <section class="mt-10">
+                <h1 class="text-2xl font-bold m-2">🔥 Welcome to DCB!</h1>
+                <p class="m-2">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+                <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+
+                    <div id="add-money-card" class="box border rounded-sm text-center p-4  cursor-pointer">
+                        <img class="w-8 mx-auto" src="img/wallet1.png" alt="">
+                        <h3>Add Money</h3>
+                    </div>
+
+                    <div id="cashout-card" class="box border rounded-sm text-center p-3 ">
+                        <img class="w-8 mx-auto" src="img/send1.png" alt="">
+                        <h3>Cashout</h3>
+                    </div>
+                    <div class="box border rounded-sm text-center p-3 ">
+                        <img class="w-8 mx-auto" src="img/money1.png" alt="">
+                        <h3>Transfer Money</h3>
+                    </div>
+                    <div class="box border rounded-sm text-center p-3 ">
+                        <img class="w-8 mx-auto" src="img/bonus1.png" alt="">
+                        <h3>Get Bonus</h3>
+                    </div>
+                    <div class="box border rounded-sm text-center p-3 ">
+                        <img class="w-8 mx-auto" src="img/paybil.png" alt="">
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <div class="box border rounded-sm text-center p-3 ">
+                        <img class="w-8 mx-auto" src="img/transaction1.png" alt="">
+                        <h3>Transactions</h3>
+                    </div>
+                </div>
+<!-- ------------------ Add Money section ----------------------------------- -->
+                <section id="add-money-section">
+                    <h1 class="ml-10 font-bold text-base mt-2">Add Money</h1>
+
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+
+                            <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <legend>Select A Bank</legend>
+                                    <select id="select-container" class="select border-none rounded-xl" required>
+                                        <option disabled selected>select</option>
+                                        <option value="Bkash">Bkash</option>
+                                        <option value="Nagad">Nagad</option>
+                                        <option value="DBBL">DBBL</option>
+                                    </select>
+                                    <fieldset class="fieldset">
+                                        <label class="label">Bank Account Number</label>
+                                        <input value="01878902925" id="Bank-account-number" type="number"
+                                            class="input border-none rounded-xl"
+                                            placeholder="Enter 11 digit account number" required />
+
+                                        <label class="label">Amount to Add</label>
+                                        <input id="amount-input" type="number" class="input border-none rounded-xl"
+                                            placeholder="Add Amount to withdraw" required />
+
+                                        <label class="label">4 digit pin</label>
+                                        <input value="1234" id="pin" type="text" class="input border-none rounded-xl"
+                                            placeholder="Enter 4 digit pin" required />
+
+                                        <div><a class="link link-hover">Forgot password?</a></div>
+                                        <button id="btn-add-money" class="btn btn-primary border-none rounded-3xl">Add
+                                            Money</button>
+                                        <!-- <button class="btn btn-info">Info</button> -->
+                                        <!-- <button class="btn btn-neutral mt-4">Login</button> -->
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+<!-- ------------------ Cash Out section ----------------------------------- -->
+                <section id="Cashout-section">
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+
+                            <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                    <legend class="font-bold text-base">Cash Out</legend>
+                                    
+                                    <fieldset class="fieldset">
+                                        <label class="label">Agent Number</label>
+                                        <input value="01878902925" id="agent-number" type="number"
+                                            class="input border-none rounded-xl"
+                                            placeholder="Enter 11 digit number" required />
+
+                                        <label class="label">Amount</label>
+                                        <input id="amount-withdraw" type="number" class="input border-none rounded-xl"
+                                            placeholder="Add Amount to withdraw" required />
+
+                                        <label class="label">Pin Number</label>
+                                        <input value="1234" id="cashout-pin-number" type="text" class="input border-none rounded-xl"
+                                            placeholder="Enter 4 digit pin" required />
+
+                                        <div><a class="link link-hover">Forgot password?</a></div>
+                                        <button id="cashout-btn" class="btn btn-primary border-none rounded-3xl">Withdraw Money</button>
+                                        <!-- <button class="btn btn-info">Info</button> -->
+                                        <!-- <button class="btn btn-neutral mt-4">Login</button> -->
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </header>
+
+
+    </main>
+    
+    <script src="js/add-money.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/cashout.js"></script>
+</body>
+
+</html>

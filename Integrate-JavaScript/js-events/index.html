@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Today iam learning JavaScript Dom</h1>
+        <button onclick="console.log('7')">Click me</button>
+        <button onclick="console.log('Dom Events')">Anather Btn</button>
+        <button onclick="console.log(58)">third btn</button>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <section>
+        <button onclick="makeBlue()">Make Blue</button>
+        <button onclick="textCenter()">text aling center</button>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- // Step - 2  Id er mardhome seclec kora -->
+    <section>
+        <button id="make-yellow">Make Yellow</button>
+    </section>
+    <!-- step - 3 diffrend syestem ata beshi use korbo na -->
+    <div>
+        <button id="Make-parple">make Purple</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--📌 option - 4  use     addEventListener -->
+    <div>
+        <button id="make-gold">Make Gold</button>
+        <button id="make-lightgray">margin-right</button>
+        <button id="make-black">make black</button>
+    </div>
+    <script>
+        document.getElementById('make-lightgray').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'lightgray'
+        })
+
+        document.getElementById('make-black').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'black'
+        })
+       
+        
+    </script>
+    <script src="js-file/index.js"></script>
+</body>
+</html>

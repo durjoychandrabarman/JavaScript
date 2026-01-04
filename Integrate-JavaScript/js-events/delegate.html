@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+
+<body>
+    <section>
+        <h1>Explore concept of delegate</h1>
+        <ol id="ol-item">
+            <li class="item">My Awesome Item - 1</li>
+            <li class="item">My Awesome Item - 2</li>
+            <li class="item">My Awesome Item - 3</li>
+            <li class="item">My Awesome Item - 4</li>
+            <li class="item">My Awesome Item - 5</li>
+        </ol>
+        <button id="btn-add-item">Add the new Item</button>
+    </section>
+    <script>
+        // const items = document.getElementsByClassName('item')
+        // for (const item of items) {
+        //     item.addEventListener('click', function (event) {
+        //         // console.log(event.target.parentNode)
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        document.getElementById('ol-item').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('btn-add-item')
+            .addEventListener('click', function () { 
+                const ol = document.getElementById('ol-item')
+
+                const li = document.createElement('li');
+                li.innerText = 'Iam added the New Item'
+
+                ol.appendChild(li)
+            })
+    </script>
+</body>
+
+</html>

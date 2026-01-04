@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GidHub Delete</title>
+</head>
+<body>
+    <section>
+        <h1 id="page-title">Iam Delete My gid hub Repo</h1>
+        <input id="input-text" type="text">
+        <button id="btn-delete" disabled>Delete</button>
+    </section>
+    <script>
+        document.getElementById('input-text').addEventListener('keyup',function(event){
+            // console.log('dfddfd')
+            const text = event.target.value;
+            const btnDelete = document.getElementById('btn-delete')
+            // console.log(text)
+            if (text === 'delete'){
+                // console.log('delete typing')
+                btnDelete.removeAttribute('disabled')
+                btnDelete.addEventListener('click',function(){
+                    const pageTitle = document.getElementById('page-title')
+                    pageTitle.innerText = 'Your repo Delete sucessfull'
+                })
+                
+            }
+            else{
+                console.log( 'somthing else')
+                btnDelete.setAttribute('disabled',true)
+            }
+        })
+    </script>
+</body>
+</html>

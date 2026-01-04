@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCB Mobile Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800">
+    <main class="max-w-md min-h-screen mx-auto py-6 bg-gray-100">
+        <header>
+            <nav class="flex justify-center items-center mt-11">
+                <div class="mt-6 relative flex justify-center items-center w-9/12 mb-10">
+                    <img class="w-48 absolute" src="img/bg.png" alt="">
+                    <img class="w-16" src="img/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+
+        <!-- Login section  -->
+        <div class=" ">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="label">Mobile Number</label>
+                            <input value="01878902925" id="mobile-number" type="number" class="input" placeholder="Enter your number" required/>
+                            
+                            <label class="label">Pin Number</label>
+                            <input value="1234" id="pin" type="password" class="input" placeholder="Enter 4 digit pin number" required />
+
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="btn-login" class="btn btn-primary">login</button>
+                            <!-- <button class="btn btn-info">Info</button> -->
+                            <!-- <button class="btn btn-neutral mt-4">Login</button> -->
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
