@@ -1,0 +1,149 @@
+নিচে JavaScript DOM – Event Listener (Event Handler) বিষয়টা সহজ বাংলা + উদাহরণ দিয়ে বুঝিয়ে দিলাম 👇
+
+5. Add Event Listener (Event Handler) মানে কী?
+
+👉 Event Handler হলো এমন একটি ফাংশন যা কোনো ইভেন্ট ঘটলে কাজ করে।
+যেমন:
+
+বাটনে ক্লিক করলে
+
+ইনপুটে টাইপ করলে
+
+ইনপুটে ফোকাস / ব্লার হলে
+
+
+5.1 Common Events (click, focus, blur, change, keyup)
+✅ 1. click event
+
+👉 কোনো element-এ ক্লিক করলে কাজ করে
+
+<button id="btn">Click Me</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", function () {
+  alert("Button clicked!");
+});
+</script>
+
+
+📌 ব্যবহার: Button, link, div ইত্যাদি
+
+
+
+✅ 2. focus event
+
+👉 input-এ ক্লিক করলে বা কার্সর গেলে
+
+<input type="text" id="name">
+
+<script>
+document.getElementById("name").addEventListener("focus", function () {
+  console.log("Input focused");
+});
+</script>
+
+
+📌 ব্যবহার: input, textarea
+
+
+
+✅ 3. blur event
+
+👉 input থেকে কার্সর বের হলে
+
+<input type="text" id="email">
+
+<script>
+document.getElementById("email").addEventListener("blur", function () {
+  console.log("Input blurred");
+});
+</script>
+
+
+📌 ব্যবহার: Validation-এর জন্য বেশি ব্যবহার হয়
+
+
+
+
+✅ 4. change event
+
+👉 input বা select-এর ভ্যালু change হওয়ার পর
+
+<select id="city">
+  <option>Dhaka</option>
+  <option>Rajshahi</option>
+</select>
+
+<script>
+document.getElementById("city").addEventListener("change", function () {
+  console.log("Value changed");
+});
+</script>
+
+
+📌 ব্যবহার: select, checkbox, radio
+
+
+
+
+✅ 5. keyup event
+
+👉 কিবোর্ড থেকে চাপ দেওয়া কী ছেড়ে দিলে
+
+<input type="text" id="search">
+
+<script>
+document.getElementById("search").addEventListener("keyup", function () {
+  console.log(this.value);
+});
+</script>
+
+
+📌 ব্যবহার: live search, typing check
+
+
+
+5.2 addEventListener vs onclick
+🔴 Method 1: HTML attribute (onclick)
+<button onclick="myHandler()">Click</button>
+
+<script>
+function myHandler() {
+  alert("Button clicked");
+}
+</script>
+
+
+❌ ডিসঅ্যাডভান্টেজ
+
+HTML আর JS মিক্স হয়ে যায়
+
+একাধিক event দেওয়া যায় না
+
+🟢 Method 2: addEventListener (Best Practice ✅)
+<button id="btn">Click</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", myHandler);
+
+function myHandler() {
+  alert("Button clicked");
+}
+</script>
+
+
+✅ ফায়দা
+
+HTML পরিষ্কার থাকে
+
+এক element-এ একাধিক event যোগ করা যায়
+
+Professional way
+
+🔥 সংক্ষেপে মনে রাখার টেবিল
+Event	কাজ
+click	ক্লিক করলে
+focus	ইনপুটে ঢুকলে
+blur	ইনপুট থেকে বের হলে
+change	ভ্যালু চেঞ্জ হলে
+keyup	কী ছেড়ে দিলে

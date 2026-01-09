@@ -1,0 +1,79 @@
+Function দিয়ে Duplicate Code কমানো
+
+6. Function ব্যবহার করে Duplicate Code কমানো (Beginner Friendly – বাংলা)
+
+👉 Duplicate code মানে হচ্ছে একই কাজের কোড বারবার লেখা।
+এটা ভালো practice না ❌
+এর বদলে আমরা function ব্যবহার করি ✅
+
+🔴 সমস্যা (Duplicate Code উদাহরণ)
+let a = 10;
+let b = 20;
+let sum1 = a + b;
+console.log(sum1);
+
+let x = 5;
+let y = 15;
+let sum2 = x + y;
+console.log(sum2);
+
+
+🔹 এখানে একই কাজ (যোগ করা) বারবার করা হয়েছে।
+
+✅ সমাধান: Function ব্যবহার
+function addNumbers(num1, num2) {
+    let sum = num1 + num2;
+    console.log(sum);
+}
+
+addNumbers(10, 20);
+addNumbers(5, 15);
+
+
+🟢 এখন একই কাজ বারবার লেখার দরকার নেই
+শুধু function call করলেই হবে
+
+📌 Function ব্যবহার করার সুবিধা
+
+✔ কোড ছোট ও পরিষ্কার হয়
+
+✔ সহজে বুঝা যায়
+
+✔ Bug fix সহজ
+
+✔ একই function বহু জায়গায় ব্যবহার করা যায়
+
+🧠 DOM Example (Real Life)
+
+❌ Duplicate Code
+
+document.getElementById("btn1").addEventListener("click", function () {
+    document.getElementById("title").innerText = "Button 1 Clicked";
+});
+
+
+document.getElementById("btn2").addEventListener("click", function () {
+    document.getElementById("title").innerText = "Button 2 Clicked";
+});
+
+✅ Function দিয়ে Solve
+function changeTitle(text) {
+    document.getElementById("title").innerText = text;
+}
+
+document.getElementById("btn1").addEventListener("click", function () {
+    changeTitle("Button 1 Clicked");
+});
+
+document.getElementById("btn2").addEventListener("click", function () {
+    changeTitle("Button 2 Clicked");
+});
+
+🟡 Shortcut Way (Arrow Function)
+const changeTitle = (text) => {
+    document.getElementById("title").innerText = text;
+};
+
+🧩 মনে রাখবে
+
+একই কাজ যদি ২ বার বা তার বেশি করো → Function বানাও

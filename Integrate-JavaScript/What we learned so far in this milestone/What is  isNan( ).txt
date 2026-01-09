@@ -1,0 +1,48 @@
+isNaN কী JavaScript-এ? (সহজ বাংলায়)
+
+isNaN() হলো JavaScript-এর একটি built-in function, যেটা দিয়ে চেক করা হয়—
+👉 কোনো value Number না কি না (মানে Not a Number কিনা)।
+
+NaN মানে কী?
+
+NaN = Not a Number
+
+যখন কোনো হিসাব বা কনভার্সন থেকে নাম্বার পাওয়া যায় না, তখন JavaScript NaN দেয়।
+
+উদাহরণ:
+
+"abc" * 10   // NaN
+
+isNaN() কী করে?
+
+যদি value number না হয় → true
+
+যদি value valid number হয় → false
+
+উদাহরণ:
+isNaN(10);        // false  (১০ নাম্বার)
+isNaN("20");      // false  ("20" নাম্বারে কনভার্ট হয়)
+isNaN("abc");     // true   (নাম্বার না)
+isNaN(NaN);       // true
+
+⚠️ গুরুত্বপূর্ণ বিষয় (Beginner দের জন্য খুব দরকার)
+
+isNaN() আগে value কে number এ কনভার্ট করে, তারপর চেক করে।
+
+isNaN(" ");   // false 😮
+
+
+কারণ " " → 0 হয়ে যায়
+
+✅ ভালো পদ্ধতি: Number.isNaN()
+
+এটা strict check করে (কনভার্ট করে না)
+
+Number.isNaN("abc"); // false
+Number.isNaN(NaN);   // true
+
+সহজ করে মনে রাখো
+
+isNaN() → loose check (convert করে)
+
+Number.isNaN() → strict check (safe)

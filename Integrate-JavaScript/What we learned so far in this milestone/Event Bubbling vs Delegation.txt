@@ -1,0 +1,85 @@
+Event Bubbling আর Event Delegation—এই দুইটা বিষয় একসাথে বুঝলে DOM event অনেক সহজ হয়ে যাবে।
+
+1️⃣ Event Bubbling কী?
+
+👉 Event Bubbling মানে হলো:
+কোনো child element-এ event ঘটলে, সেই event আগে child-এ চলে, তারপর ধাপে ধাপে তার parent → grandparent → document পর্যন্ত উঠে যায়।
+
+সহজ ভাষায়
+
+ভিতর থেকে বাইরে দিকে event ছড়িয়ে যাওয়া = Event Bubbling
+
+উদাহরণ (ধারণা)
+<div id="parent">
+  <button id="child">Click me</button>
+</div>
+
+
+যদি button এ click করো:
+
+আগে button এর click event
+
+তারপর div (parent) এর click event
+
+তারপর body, document
+
+এটাই event bubbling 🔼
+
+2️⃣ Event Delegation কী?
+
+👉 Event Delegation হলো:
+অনেকগুলো child element-এ আলাদা আলাদা event না বসিয়ে,
+একটা parent element-এ event বসানো এবং child কে চিনে নেওয়া।
+
+👉 এটা সম্ভব হয় event bubbling এর জন্য।
+
+সহজ ভাষায়
+
+Parent এ event বসিয়ে child কে handle করা = Event Delegation
+
+3️⃣ Event Delegation কেন দরকার?
+❌ খারাপ পদ্ধতি
+
+১০টা button থাকলে ১০টা event listener বসানো 😓
+
+✅ ভালো পদ্ধতি
+
+Parent এ ১টা event listener বসানো 😎
+
+সুবিধা
+
+✔ কম কোড
+✔ দ্রুত (better performance)
+✔ পরে dynamically নতুন element যোগ হলেও কাজ করে
+
+4️⃣ Event Delegation কিভাবে কাজ করে?
+
+👉 Event bubble হয়ে parent পর্যন্ত আসে
+👉 Parent থেকে event.target দিয়ে বোঝা যায় কোন child-এ click হয়েছে
+
+উদাহরণ
+<ul id="list">
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Mango</li>
+</ul>
+
+document.getElementById("list").addEventListener("click", function(event){
+  console.log(event.target.innerText);
+});
+
+
+✔ যেকোনো li তে click করলেই কাজ করবে
+✔ নতুন li যোগ করলেও event কাজ করবে
+
+5️⃣ Event Bubbling বনাম Event Delegation
+বিষয়	Event Bubbling	Event Delegation
+কী	Event উপরে উঠে যায়	Parent দিয়ে child handle
+উদ্দেশ্য	Event flow বোঝা	কোড কমানো
+ব্যবহার	Default behavior	Practical solution
+নির্ভর করে	DOM structure	event.target
+6️⃣ ছোট করে মনে রাখার ট্রিক 🧠
+
+🔼 Event Bubbling → Child ➜ Parent ➜ Document
+
+🎯 Event Delegation → Parent এ event, target দিয়ে child চেনা
