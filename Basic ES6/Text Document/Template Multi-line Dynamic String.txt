@@ -1,0 +1,68 @@
+নিচে Template String, Multi-line String, আর Dynamic String — তিনটাই সহজ বাংলায় + উদাহরণসহ বুঝিয়ে দিচ্ছি 👇
+
+1️⃣ Template String কী? (ES6)
+
+Template String হলো backtick ( ) ব্যবহার করে লেখা string।
+এটার সবচেয়ে বড় সুবিধা:
+
+ভেতরে variable বসানো যায়
+
+multiple line লেখা যায়
+
+string লেখা অনেক সহজ হয়
+
+const name = "Durjoy";
+const age = 18;
+
+const text = `My name is ${name}. I am ${age} years old.`;
+console.log(text);
+
+
+🔹 ${} এর ভেতরে variable বা expression লেখা হয়।
+
+2️⃣ Multiple Line String কী?
+
+এক লাইনের বেশি string লিখতে হলে আগে ঝামেলা ছিল (\n)
+Template string এ সরাসরি নতুন লাইনে লেখা যায়
+
+❌ পুরনো পদ্ধতি:
+
+const text = "Hello\nHow are you?\nI am fine";
+
+
+✅ Template string:
+
+const text = `Hello
+How are you?
+I am fine`;
+
+
+👉 খুব সহজ ও পরিষ্কার ✨
+
+3️⃣ Dynamic String কী?
+
+যে string এ variable বা value change হলে string-ও change হয়, তাকে Dynamic String বলে।
+
+const product = "Laptop";
+const price = 50000;
+
+const message = `Product: ${product}, Price: ${price} taka`;
+console.log(message);
+
+
+🔹 এখানে product বা price বদলালে message নিজে থেকেই বদলে যাবে।
+
+🧠 Real Life Example (DOM ব্যবহার করে)
+const userName = "Durjoy";
+const balance = 1200;
+
+document.getElementById("info").innerText =
+`Name: ${userName}
+Balance: ${balance} Tk`;
+
+📝 Short Summary
+বিষয়	ব্যাখ্যা
+Template String	Backtick (`) দিয়ে লেখা string
+Multi-line String	একাধিক লাইনে লেখা যায়
+Dynamic String	Variable দিয়ে string change হয়
+ব্যবহার	ES6 থেকে শুরু

@@ -1,0 +1,69 @@
+JavaScript-এ const আর let দুটোই variable declare করতে ব্যবহার হয়। কিন্তু কখন কোনটা ব্যবহার করবে—এইটাই আসল বিষয়। নিচে সহজ করে বুঝিয়ে দিচ্ছি 👇
+
+🔹 let কখন ব্যবহার করবো?
+
+👉 যখন variable-এর value পরে change হবে
+
+উদাহরণ:
+let age = 18;
+age = 19; // ✅ পরিবর্তন করা যাচ্ছে
+
+ব্যবহার করবে যখন:
+
+value update হবে (counter, total, score)
+
+loop এর ভিতরে
+
+user input অনুযায়ী value বদলাবে
+
+উদাহরণ:
+let sum = 0;
+sum = sum + 10;
+
+🔹 const কখন ব্যবহার করবো?
+
+👉 যখন variable-এর value কখনো change হবে না
+
+উদাহরণ:
+const name = "Durjoy";
+name = "Rahim"; // ❌ Error হবে
+
+ব্যবহার করবে যখন:
+
+fixed value (API URL, config)
+
+function
+
+object / array (reference change হবে না)
+
+উদাহরণ:
+const pi = 3.1416;
+
+⚠️ গুরুত্বপূর্ণ বিষয় (object / array)
+
+const দিয়ে object/array declare করলে
+👉 ভেতরের value change করা যায়, কিন্তু পুরোটা replace করা যায় না।
+
+উদাহরণ:
+const user = { name: "Durjoy", age: 18 };
+
+user.age = 19;     // ✅ allowed
+user = {};         // ❌ not allowed
+
+🔹 var কেন ব্যবহার করবো না?
+
+block scope নেই
+
+bug বেশি হয়
+👉 modern JS-এ avoid করাই best
+
+✅ সহজ নিয়ম মনে রাখো
+Situation	Use
+Value change হবে	let
+Value change হবে না	const
+Function, object, array	const
+Loop counter	let
+⭐ Best Practice
+
+👉 সবসময় আগে const ব্যবহার করো
+👉 যদি পরে value change দরকার হয়, তখন let

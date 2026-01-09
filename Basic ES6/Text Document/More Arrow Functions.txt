@@ -1,0 +1,113 @@
+নিশ্চিত 😊
+চলো Arrow Function-কে আর একটু গভীরে ও পরিষ্কারভাবে দেখি — More Arrow Functions মানে advanced + practical usage।
+
+1️⃣ Arrow Function – Quick Recap
+const add = (a, b) => a + b;
+
+
+👉 function keyword নাই
+👉 return এক লাইনে হলে লাগেনা
+
+2️⃣ Single Parameter (Bracket ছাড়া)
+const square = x => x * x;
+console.log(square(5)); // 25
+
+
+👉 একটাই parameter হলে () দরকার নেই
+
+3️⃣ No Parameter (Bracket must)
+const sayHello = () => console.log("Hello World");
+sayHello();
+
+4️⃣ Multiple Lines Body (Curly + return)
+
+যদি function body multiple লাইনের হয় 👇
+
+const sum = (a, b) => {
+    const total = a + b;
+    return total;
+};
+console.log(sum(10, 20)); // 30
+
+
+👉 {} দিলে return লিখতেই হবে
+
+5️⃣ Object Return করার সময়
+
+⚠️ object return করলে () দিতে হয়
+
+❌ ভুল
+
+const getUser = () => { name: "Durjoy" };
+
+
+✅ সঠিক
+
+const getUser = () => ({ name: "Durjoy", age: 18 });
+console.log(getUser());
+
+6️⃣ Arrow Function with Array Methods (Most Important 🔥)
+🔹 map
+const numbers = [1, 2, 3, 4];
+
+const double = numbers.map(n => n * 2);
+console.log(double);
+
+🔹 filter
+const nums = [5, 10, 15, 20];
+
+const big = nums.filter(n => n > 10);
+console.log(big);
+
+🔹 forEach
+nums.forEach(n => console.log(n));
+
+7️⃣ Arrow Function & this (Important Concept ⚠️)
+
+Arrow function নিজের this বানায় না
+👉 parent scope থেকে নেয়
+
+❌ Problem with normal function
+
+const person = {
+    name: "Durjoy",
+    sayName: function () {
+        setTimeout(function () {
+            console.log(this.name); // undefined
+        }, 1000);
+    }
+};
+person.sayName();
+
+
+✅ Solution using arrow function
+
+const person = {
+    name: "Durjoy",
+    sayName: function () {
+        setTimeout(() => {
+            console.log(this.name); // Durjoy
+        }, 1000);
+    }
+};
+person.sayName();
+
+8️⃣ Arrow Function as Callback
+setTimeout(() => {
+    console.log("This runs after 2 seconds");
+}, 2000);
+
+9️⃣ Arrow Function vs Normal Function (Short Table)
+বিষয়	Arrow Function	Normal Function
+function keyword	❌	✅
+implicit return	✅	❌
+own this	❌	✅
+constructor	❌	✅
+🔟 কখন Arrow Function ব্যবহার করবে?
+
+✅ map, filter, forEach
+✅ callback function
+✅ short & clean code
+
+❌ object method
+❌ constructor function
