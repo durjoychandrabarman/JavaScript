@@ -19,3 +19,4 @@ const add = (a, b) => {
 // (এক লাইনের body হলে {} ও return বাদ দেওয়া যায়)
 const sum =(a , b) => a + b;
 console.log(sum(3,4))
+mo
